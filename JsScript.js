@@ -29,14 +29,12 @@ const populateTodaysTasks = () => {
     };
 
     checkbox.onchange = () => {
-      if (!checkbox.checked) {
-        button.disabled = true;
-        button.style.pointerEvents = 'none';
-        li.style.pointerEvents = 'none';
-      } else {
+      if (checkbox.checked) {
         button.disabled = false;
         button.style.pointerEvents = 'auto';
-        li.style.pointerEvents = 'auto';
+      } else {
+        button.disabled = true;
+        button.style.pointerEvents = 'none';
       }
     };
 
