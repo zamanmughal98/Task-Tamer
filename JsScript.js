@@ -16,12 +16,8 @@ const populateTodaysTasks = () => {
     const button = document.createElement('button');
 
     checkbox.type = 'checkbox';
-    checkbox.id = `checkbox${index + 1}`;
-
     li.innerHTML = `${index + 1}. ${task}`;
-
-    button.innerHTML = 'done';
-    button.id = `button${index + 1}`;
+    button.innerHTML = 'Done';
 
     button.onclick = () => {
       li.style.textDecoration = 'line-through';
@@ -36,9 +32,11 @@ const populateTodaysTasks = () => {
       if (!checkbox.checked) {
         button.disabled = true;
         button.style.pointerEvents = 'none';
+        li.style.pointerEvents = 'none';
       } else {
         button.disabled = false;
         button.style.pointerEvents = 'auto';
+        li.style.pointerEvents = 'auto';
       }
     };
 
@@ -50,7 +48,6 @@ const populateTodaysTasks = () => {
     li.prepend(checkbox);
     taskContainer.appendChild(li);
     li.appendChild(button);
-    taskContainer.appendChild(document.createElement('br'));
   });
 };
 
