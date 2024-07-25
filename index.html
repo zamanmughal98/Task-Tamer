@@ -3,12 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TODO Taks List</title>
+    <title>TODO Task List</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>TODO Task List</h1>
-    <ul id="taskContainer" />
+    <div id="addTaskContainer">
+      <div class="inputContainer">
+        <input type="text" id="newTaskInput" placeholder=" " />
+        <label for="newTaskInput">New Task</label>
+      </div>
+      <button id="addTaskButton">Add Task</button>
+    </div>
+    <div id="taskContainerWrapper">
+      <ul id="taskContainer"></ul>
+    </div>
     <script src="JsScript.js"></script>
   </body>
 </html>
